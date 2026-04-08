@@ -1,89 +1,92 @@
-// pages/index/index.less
+// pages/index/index.less - V2 温暖简约风格
 .container {
   min-height: 100vh;
-  background: #f5f7fa;
+  background: #FFF8F5;
   padding-bottom: 120rpx;
 }
 
 .header {
-  background: linear-gradient(135deg, #4A90E2 0%, #67B7E8 100%);
-  padding: 60rpx 40rpx 80rpx;
+  background: linear-gradient(135deg, #FFB5A7 0%, #FEC8D8 100%);
+  padding: calc(60rpx + env(safe-area-inset-top)) 40rpx 100rpx;
 
   .header-content {
     display: flex;
     align-items: center;
-    gap: 20rpx;
+    gap: 16rpx;
   }
 
   .baby-avatar {
-    width: 80rpx;
-    height: 80rpx;
-    border-radius: 40rpx;
-    background: #fff;
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 36rpx;
+    background: rgba(255,255,255,0.9);
+    border: 4rpx solid rgba(255,255,255,0.8);
   }
 
   .app-title {
-    font-size: 36rpx;
-    font-weight: 600;
+    font-size: 40rpx;
+    font-weight: 700;
     color: #fff;
+    letter-spacing: 2rpx;
   }
 }
 
 .quick-actions {
   display: flex;
-  justify-content: space-around;
-  padding: 0 30rpx;
-  margin-top: -50rpx;
+  justify-content: center;
+  gap: 24rpx;
+  padding: 0 40rpx;
+  margin-top: -40rpx;
 
   .action-btn {
-    width: 200rpx;
-    height: 200rpx;
-    border-radius: 24rpx;
+    flex: 1;
+    max-width: 220rpx;
+    height: 220rpx;
+    border-radius: 40rpx;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.1);
+    gap: 12rpx;
+    box-shadow: 0 8rpx 30rpx rgba(0, 0, 0, 0.08);
 
     .action-icon {
-      font-size: 64rpx;
-      margin-bottom: 12rpx;
+      font-size: 72rpx;
     }
 
     .action-label {
-      font-size: 28rpx;
-      font-weight: 500;
+      font-size: 30rpx;
+      font-weight: 600;
+      color: #fff;
     }
   }
 
   .feed-btn {
-    background: #FFF0F5;
-    color: #FF8FAB;
+    background: linear-gradient(180deg, #FF9B93 0%, #FF8A80 100%);
   }
 
   .poop-btn {
-    background: #F5F0E8;
-    color: #8B7355;
+    background: linear-gradient(180deg, #A8E6CF 0%, #88D8B0 100%);
   }
 
   .urine-btn {
-    background: #FFF9E6;
-    color: #F5A623;
+    background: linear-gradient(180deg, #87CEEB 0%, #7EC8E3 100%);
   }
 }
 
 .summary-card {
-  margin: 40rpx 30rpx 0;
+  margin: 40rpx 32rpx 0;
   background: #fff;
-  border-radius: 24rpx;
-  padding: 30rpx;
-  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+  border-radius: 32rpx;
+  padding: 32rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
 
   .summary-title {
-    font-size: 30rpx;
-    font-weight: 600;
-    color: #333;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: #999;
     margin-bottom: 24rpx;
+    letter-spacing: 1rpx;
   }
 
   .summary-list {
@@ -93,22 +96,30 @@
 
   .summary-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 8rpx;
 
     .summary-icon {
-      font-size: 36rpx;
+      font-size: 40rpx;
+      margin-bottom: 4rpx;
     }
 
     .summary-value {
-      font-size: 32rpx;
-      font-weight: 600;
+      font-size: 36rpx;
+      font-weight: 700;
       color: #333;
     }
 
     .summary-unit {
-      font-size: 24rpx;
-      color: #999;
+      font-size: 22rpx;
+      color: #bbb;
+    }
+
+    .summary-label {
+      font-size: 22rpx;
+      color: #bbb;
+      margin-top: 4rpx;
     }
   }
 }

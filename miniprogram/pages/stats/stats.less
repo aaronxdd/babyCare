@@ -1,41 +1,43 @@
-// pages/stats/stats.less
+// pages/stats/stats.less - V2 温暖简约风格
 .container {
   min-height: 100vh;
-  background: #f5f7fa;
+  background: #FFF8F5;
   padding-bottom: 120rpx;
 }
 
 .header {
-  background: linear-gradient(135deg, #4A90E2 0%, #67B7E8 100%);
-  padding: 60rpx 40rpx 120rpx;
+  background: linear-gradient(135deg, #FFB5A7 0%, #FEC8D8 100%);
+  padding: calc(60rpx + env(safe-area-inset-top)) 40rpx 120rpx;
 
   .title {
     font-size: 36rpx;
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
+    letter-spacing: 2rpx;
   }
 }
 
 .period-tabs {
   display: flex;
-  margin: -80rpx 30rpx 30rpx;
+  margin: -60rpx 24rpx 24rpx;
   background: #fff;
-  border-radius: 20rpx;
+  border-radius: 24rpx;
   padding: 8rpx;
-  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
 
   .tab {
     flex: 1;
     height: 72rpx;
-    border-radius: 16rpx;
+    border-radius: 18rpx;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 28rpx;
-    color: #666;
+    color: #999;
+    font-weight: 500;
 
     &.active {
-      background: #4A90E2;
+      background: linear-gradient(135deg, #FFB5A7 0%, #FEC8D8 100%);
       color: #fff;
     }
   }
@@ -44,52 +46,54 @@
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20rpx;
-  margin: 0 30rpx;
+  gap: 16rpx;
+  margin: 0 24rpx;
 
   .stat-card {
     background: #fff;
-    border-radius: 20rpx;
-    padding: 30rpx 20rpx;
+    border-radius: 28rpx;
+    padding: 32rpx 16rpx;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.04);
 
     .stat-icon {
-      font-size: 48rpx;
+      font-size: 52rpx;
       margin-bottom: 12rpx;
     }
 
     .stat-value {
-      font-size: 48rpx;
-      font-weight: 700;
+      font-size: 52rpx;
+      font-weight: 800;
       color: #333;
+      line-height: 1;
     }
 
     .stat-label {
-      font-size: 24rpx;
-      color: #999;
-      margin-top: 8rpx;
+      font-size: 22rpx;
+      color: #bbb;
+      margin-top: 10rpx;
+      letter-spacing: 1rpx;
     }
 
     .stat-sub {
-      font-size: 22rpx;
-      color: #aaa;
-      margin-top: 4rpx;
+      font-size: 20rpx;
+      color: #ccc;
+      margin-top: 6rpx;
     }
   }
 }
 
 .chart-card {
-  margin: 30rpx;
+  margin: 24rpx;
   background: #fff;
-  border-radius: 20rpx;
-  padding: 30rpx;
-  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+  border-radius: 28rpx;
+  padding: 32rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.04);
 
   .chart-title {
-    font-size: 30rpx;
+    font-size: 28rpx;
     font-weight: 600;
     color: #333;
     margin-bottom: 24rpx;
@@ -97,9 +101,9 @@
   }
 
   .chart-placeholder {
-    height: 300rpx;
-    background: #f9f9f9;
-    border-radius: 16rpx;
+    height: 320rpx;
+    background: linear-gradient(180deg, #FFF8F5 0%, #FFF5F2 100%);
+    border-radius: 20rpx;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,13 +111,12 @@
     gap: 12rpx;
 
     .placeholder-text {
-      font-size: 32rpx;
-      color: #ccc;
+      font-size: 36rpx;
     }
 
     .placeholder-sub {
       font-size: 24rpx;
-      color: #ddd;
+      color: #ccc;
     }
   }
 }

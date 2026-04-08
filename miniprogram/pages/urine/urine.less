@@ -1,27 +1,28 @@
-// pages/urine/urine.less
+// pages/urine/urine.less - V2 温暖简约风格
 .container {
   min-height: 100vh;
-  background: #f5f7fa;
+  background: #FFF8F5;
   padding-bottom: 120rpx;
 }
 
 .header {
-  background: linear-gradient(135deg, #F5A623 0%, #F7C948 100%);
-  padding: 60rpx 40rpx 40rpx;
+  background: linear-gradient(135deg, #87CEEB 0%, #7EC8E3 100%);
+  padding: calc(60rpx + env(safe-area-inset-top)) 40rpx 60rpx;
 
   .title {
     font-size: 36rpx;
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
+    letter-spacing: 2rpx;
   }
 }
 
 .form-card {
   margin: 30rpx;
   background: #fff;
-  border-radius: 24rpx;
-  padding: 30rpx;
-  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+  border-radius: 32rpx;
+  padding: 40rpx 32rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
 }
 
 .form-item {
@@ -30,11 +31,12 @@
     align-items: center;
     gap: 12rpx;
     margin-bottom: 30rpx;
-    font-size: 28rpx;
-    color: #666;
+    font-size: 26rpx;
+    color: #999;
+    letter-spacing: 1rpx;
 
     .label-icon {
-      font-size: 36rpx;
+      font-size: 32rpx;
     }
   }
 }
@@ -45,9 +47,9 @@
 
   .amount-btn {
     flex: 1;
-    height: 160rpx;
-    border-radius: 20rpx;
-    background: #FFF9E6;
+    height: 180rpx;
+    border-radius: 32rpx;
+    background: #F0F8FF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,16 +57,18 @@
     gap: 12rpx;
 
     .btn-icon {
-      font-size: 40rpx;
+      font-size: 44rpx;
     }
 
     .btn-text {
       font-size: 28rpx;
+      font-weight: 600;
       color: #666;
     }
 
     &.active {
-      background: #F5A623;
+      background: linear-gradient(135deg, #87CEEB 0%, #7EC8E3 100%);
+      box-shadow: 0 6rpx 20rpx rgba(135, 206, 235, 0.4);
 
       .btn-text {
         color: #fff;
@@ -74,14 +78,16 @@
 }
 
 .save-btn {
-  margin: 40rpx 30rpx;
-  height: 96rpx;
-  background: #F5A623;
-  border-radius: 48rpx;
+  margin: 48rpx 32rpx 0;
+  height: 100rpx;
+  background: linear-gradient(135deg, #87CEEB 0%, #7EC8E3 100%);
+  border-radius: 50rpx;
   color: #fff;
-  font-size: 32rpx;
-  font-weight: 600;
+  font-size: 34rpx;
+  font-weight: 700;
+  letter-spacing: 4rpx;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(135, 206, 235, 0.35);
 }

@@ -8,7 +8,7 @@ Page({
       poopCount: 0,
       urineCount: 0
     },
-    weekData: [] as any[]
+    weekData: []
   },
 
   onLoad() {

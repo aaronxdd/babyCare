@@ -3,7 +3,7 @@
   <view class="header">
     <view class="header-content">
       <image class="baby-avatar" src="/assets/baby-avatar.png" mode="aspectFill" />
-      <text class="app-title">宝贝记录</text>
+      <text class="app-title">宝贝成长记录</text>
     </view>
   </view>
 
@@ -15,11 +15,11 @@
     </view>
     <view class="action-btn poop-btn" bindtap="goToPoop">
       <text class="action-icon">💩</text>
-      <text class="action-label">拉屎</text>
+      <text class="action-label">便便</text>
     </view>
     <view class="action-btn urine-btn" bindtap="goToUrine">
       <text class="action-icon">💧</text>
-      <text class="action-label">撒尿</text>
+      <text class="action-label">尿尿</text>
     </view>
   </view>
 
@@ -35,10 +35,12 @@
       <view class="summary-item">
         <text class="summary-icon">💩</text>
         <text class="summary-value">{{summary.poopCount}}次</text>
+        <text class="summary-label">排便</text>
       </view>
       <view class="summary-item">
         <text class="summary-icon">💧</text>
         <text class="summary-value">{{summary.urineCount}}次</text>
+        <text class="summary-label">排尿</text>
       </view>
     </view>
   </view>

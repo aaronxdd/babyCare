@@ -1,7 +1,7 @@
 // pages/history/history.ts
 Page({
   data: {
-    records: [] as any[],
+    records: [],
     selectedDate: '',
     selectedType: 'all' // all / feed / poop / urine
   },
@@ -15,7 +15,7 @@ Page({
     this.loadRecords()
   },
 
-  formatDate(date: Date): string {
+  formatDate(date: Date) {
     const pad = (n: number) => n.toString().padStart(2, '0')
     return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`
   },
@@ -33,12 +33,12 @@ Page({
     this.setData({ selectedType: e.currentTarget.dataset.type })
   },
 
-  getTypeIcon(type: string): string {
-    const map: any = { feed: '🍼', poop: '💩', urine: '💧' }
-    return map[type] || '❓'
+  getTypeIcon(type: string) {
+    const map = { feed: '🍼', poop: '💩', urine: '💧' } as const
+    return type in map ? map[type as keyof typeof map] : '❓'
   },
 
-  getTypeLabel(type: string, record: any): string {
+  getTypeLabel(type: string, record: any) {
     if (type === 'feed') return `喂奶 ${record.amount}ml / ${record.duration}分钟`
     if (type === 'poop') return `拉屎 ${record.color} / ${record.shape}`
     if (type === 'urine') return `撒尿 ${record.amountLevel}`
