@@ -1,0 +1,114 @@
+// pages/index/index.less
+.container {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding-bottom: 120rpx;
+}
+
+.header {
+  background: linear-gradient(135deg, #4A90E2 0%, #67B7E8 100%);
+  padding: 60rpx 40rpx 80rpx;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 20rpx;
+  }
+
+  .baby-avatar {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+    background: #fff;
+  }
+
+  .app-title {
+    font-size: 36rpx;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+.quick-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 30rpx;
+  margin-top: -50rpx;
+
+  .action-btn {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 24rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.1);
+
+    .action-icon {
+      font-size: 64rpx;
+      margin-bottom: 12rpx;
+    }
+
+    .action-label {
+      font-size: 28rpx;
+      font-weight: 500;
+    }
+  }
+
+  .feed-btn {
+    background: #FFF0F5;
+    color: #FF8FAB;
+  }
+
+  .poop-btn {
+    background: #F5F0E8;
+    color: #8B7355;
+  }
+
+  .urine-btn {
+    background: #FFF9E6;
+    color: #F5A623;
+  }
+}
+
+.summary-card {
+  margin: 40rpx 30rpx 0;
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+
+  .summary-title {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 24rpx;
+  }
+
+  .summary-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .summary-item {
+    display: flex;
+    align-items: center;
+    gap: 8rpx;
+
+    .summary-icon {
+      font-size: 36rpx;
+    }
+
+    .summary-value {
+      font-size: 32rpx;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .summary-unit {
+      font-size: 24rpx;
+      color: #999;
+    }
+  }
+}

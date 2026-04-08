@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="header">
+    <text class="title">记录喂奶</text>
+  </view>
+
+  <view class="form-card">
+    <!-- 奶量 -->
+    <view class="form-item">
+      <view class="form-label">
+        <text class="label-icon">🍼</text>
+        <text>奶量</text>
+      </view>
+      <view class="amount-ctrl">
+        <text class="amount-value">{{amount}}</text>
+        <text class="amount-unit">ml</text>
+        <view class="step-btns">
+          <view class="step-btn" bindtap="onAmountStep" data-type="minus">-</view>
+          <view class="step-btn" bindtap="onAmountStep" data-type="add">+</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 时长 -->
+    <view class="form-item">
+      <view class="form-label">
+        <text class="label-icon">⏱</text>
+        <text>时长</text>
+      </view>
+      <view class="amount-ctrl">
+        <text class="amount-value">{{duration}}</text>
+        <text class="amount-unit">分钟</text>
+        <view class="step-btns">
+          <view class="step-btn" bindtap="onDurationStep" data-type="minus">-</view>
+          <view class="step-btn" bindtap="onDurationStep" data-type="add">+</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 喂养方式 -->
+    <view class="form-item">
+      <view class="form-label">
+        <text class="label-icon">🍼</text>
+        <text>喂养方式</text>
+      </view>
+      <view class="method-btns">
+        <view class="method-btn {{method === 'breast' ? 'active' : ''}}" bindtap="selectMethod" data-method="breast">母乳</view>
+        <view class="method-btn {{method === 'bottle' ? 'active' : ''}}" bindtap="selectMethod" data-method="bottle">瓶喂</view>
+        <view class="method-btn {{method === 'mixed' ? 'active' : ''}}" bindtap="selectMethod" data-method="mixed">混合</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="save-btn" bindtap="save">保存</view>
+</view>

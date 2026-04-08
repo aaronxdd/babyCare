@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="header">
+    <text class="title">记录撒尿</text>
+  </view>
+
+  <view class="form-card">
+    <view class="form-item">
+      <view class="form-label">
+        <text class="label-icon">💧</text>
+        <text>量级</text>
+      </view>
+      <view class="amount-btns">
+        <view class="amount-btn little {{amountLevel === 'little' ? 'active' : ''}}" bindtap="selectAmount" data-level="little">
+          <text class="btn-icon">💧</text>
+          <text class="btn-text">少量</text>
+        </view>
+        <view class="amount-btn medium {{amountLevel === 'medium' ? 'active' : ''}}" bindtap="selectAmount" data-level="medium">
+          <text class="btn-icon">💧💧</text>
+          <text class="btn-text">中等</text>
+        </view>
+        <view class="amount-btn much {{amountLevel === 'much' ? 'active' : ''}}" bindtap="selectAmount" data-level="much">
+          <text class="btn-icon">💧💧💧</text>
+          <text class="btn-text">多</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="save-btn" bindtap="save">保存</view>
+</view>

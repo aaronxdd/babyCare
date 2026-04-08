@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="header">
+    <text class="title">数据统计</text>
+  </view>
+
+  <!-- 时期切换 -->
+  <view class="period-tabs">
+    <view class="tab {{period === 'today' ? 'active' : ''}}" bindtap="switchPeriod" data-period="today">今天</view>
+    <view class="tab {{period === 'week' ? 'active' : ''}}" bindtap="switchPeriod" data-period="week">近7天</view>
+    <view class="tab {{period === 'month' ? 'active' : ''}}" bindtap="switchPeriod" data-period="month">近30天</view>
+  </view>
+
+  <!-- 统计卡片 -->
+  <view class="stats-grid">
+    <view class="stat-card feed">
+      <text class="stat-icon">🍼</text>
+      <text class="stat-value">{{summary.feedCount}}</text>
+      <text class="stat-label">喂奶次数</text>
+      <text class="stat-sub">{{summary.feedAmount}}ml</text>
+    </view>
+    <view class="stat-card poop">
+      <text class="stat-icon">💩</text>
+      <text class="stat-value">{{summary.poopCount}}</text>
+      <text class="stat-label">排便次数</text>
+    </view>
+    <view class="stat-card urine">
+      <text class="stat-icon">💧</text>
+      <text class="stat-value">{{summary.urineCount}}</text>
+      <text class="stat-label">排尿次数</text>
+    </view>
+  </view>
+
+  <!-- 趋势图（占位） -->
+  <view class="chart-card">
+    <text class="chart-title">趋势图</text>
+    <view class="chart-placeholder">
+      <text class="placeholder-text">📊 图表区域</text>
+      <text class="placeholder-sub">近7天数据趋势</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,119 @@
+// pages/stats/stats.less
+.container {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding-bottom: 120rpx;
+}
+
+.header {
+  background: linear-gradient(135deg, #4A90E2 0%, #67B7E8 100%);
+  padding: 60rpx 40rpx 120rpx;
+
+  .title {
+    font-size: 36rpx;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+.period-tabs {
+  display: flex;
+  margin: -80rpx 30rpx 30rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 8rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+
+  .tab {
+    flex: 1;
+    height: 72rpx;
+    border-radius: 16rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+    color: #666;
+
+    &.active {
+      background: #4A90E2;
+      color: #fff;
+    }
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20rpx;
+  margin: 0 30rpx;
+
+  .stat-card {
+    background: #fff;
+    border-radius: 20rpx;
+    padding: 30rpx 20rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+
+    .stat-icon {
+      font-size: 48rpx;
+      margin-bottom: 12rpx;
+    }
+
+    .stat-value {
+      font-size: 48rpx;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .stat-label {
+      font-size: 24rpx;
+      color: #999;
+      margin-top: 8rpx;
+    }
+
+    .stat-sub {
+      font-size: 22rpx;
+      color: #aaa;
+      margin-top: 4rpx;
+    }
+  }
+}
+
+.chart-card {
+  margin: 30rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+
+  .chart-title {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 24rpx;
+    display: block;
+  }
+
+  .chart-placeholder {
+    height: 300rpx;
+    background: #f9f9f9;
+    border-radius: 16rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12rpx;
+
+    .placeholder-text {
+      font-size: 32rpx;
+      color: #ccc;
+    }
+
+    .placeholder-sub {
+      font-size: 24rpx;
+      color: #ddd;
+    }
+  }
+}

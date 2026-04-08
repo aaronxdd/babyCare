@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="header">
+    <text class="title">历史记录</text>
+  </view>
+
+  <!-- 筛选 -->
+  <view class="filter-section">
+    <picker mode="date" bindchange="onDateChange">
+      <view class="date-picker">
+        <text class="icon">📅</text>
+        <text>{{selectedDate}}</text>
+      </view>
+    </picker>
+    <view class="type-filter">
+      <view class="type-btn {{selectedType === 'all' ? 'active' : ''}}" bindtap="onTypeChange" data-type="all">全部</view>
+      <view class="type-btn {{selectedType === 'feed' ? 'active' : ''}}" bindtap="onTypeChange" data-type="feed">🍼</view>
+      <view class="type-btn {{selectedType === 'poop' ? 'active' : ''}}" bindtap="onTypeChange" data-type="poop">💩</view>
+      <view class="type-btn {{selectedType === 'urine' ? 'active' : ''}}" bindtap="onTypeChange" data-type="urine">💧</view>
+    </view>
+  </view>
+
+  <!-- 记录列表 -->
+  <view class="record-list">
+    <view class="record-item" wx:for="{{records}}" wx:key="id">
+      <view class="record-icon {{item.type}}">{{item.type === 'feed' ? '🍼' : item.type === 'poop' ? '💩' : '💧'}}</view>
+      <view class="record-content">
+        <text class="record-type">{{item.type === 'feed' ? '喂奶' : item.type === 'poop' ? '拉屎' : '撒尿'}}</text>
+        <text class="record-detail">
+          <text wx:if="{{item.type === 'feed'}}">{{item.amount}}ml / {{item.duration}}分钟</text>
+          <text wx:elif="{{item.type === 'poop'}}">{{item.color}} / {{item.shape}}</text>
+          <text wx:else>{{item.amountLevel}}</text>
+        </text>
+      </view>
+      <text class="record-time">{{item.time}}</text>
+    </view>
+
+    <view class="empty-state" wx:if="{{records.length === 0}}">
+      <text class="empty-icon">📝</text>
+      <text class="empty-text">暂无记录</text>
+    </view>
+  </view>
+</view>
